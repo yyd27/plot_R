@@ -83,7 +83,7 @@ ggplot(df_g, aes(x = cond, y = RT)) +
   theme_bw()
 ```
 
-![](plot_R_2021_files/figure-gfm/compare-1.png)<!-- -->
+![](README_files/figure-gfm/compare-1.png)<!-- -->
 
 #### Basic 2-by-2 design plot
 
@@ -104,7 +104,7 @@ ggplot(df_g, aes(x = factor_A, y = RT, group = factor_B, color = factor_B)) +
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
-![](plot_R_2021_files/figure-gfm/basic22-1.png)<!-- -->
+![](README_files/figure-gfm/basic22-1.png)<!-- -->
 
 #### Fancy 2-by-2 design plot
 
@@ -131,7 +131,7 @@ ggplot(df_g, aes(x = factor_A, y = RT, group = factor_B,
                                          fill = "white", linetype = "solid"))
 ```
 
-![](plot_R_2021_files/figure-gfm/cus22-1.png)<!-- -->
+![](README_files/figure-gfm/cus22-1.png)<!-- -->
 
 #### Bar plot
 
@@ -155,7 +155,7 @@ ggplot(df_g, aes(x = factor_A, y = RT, group = cond, fill = factor_B)) +
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
-![](plot_R_2021_files/figure-gfm/bar-1.png)<!-- -->
+![](README_files/figure-gfm/bar-1.png)<!-- -->
 
 #### Box plot
 
@@ -177,7 +177,7 @@ ggplot(df_g, aes(x = factor_A, y = RT, group = cond,
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
-![](plot_R_2021_files/figure-gfm/box-1.png)<!-- -->
+![](README_files/figure-gfm/box-1.png)<!-- -->
 
 #### Violin plot
 
@@ -199,7 +199,7 @@ ggplot(df_g, aes(x = factor_A, y = RT, group = cond,
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
-![](plot_R_2021_files/figure-gfm/violin-1.png)<!-- -->
+![](README_files/figure-gfm/violin-1.png)<!-- -->
 
 #### Linear mixed effect model (LMM)
 
@@ -224,7 +224,7 @@ m$coefficients %>%
   theme_bw()
 ```
 
-![](plot_R_2021_files/figure-gfm/lmm-1.png)<!-- -->
+![](README_files/figure-gfm/lmm-1.png)<!-- -->
 
 #### Correlation and linear regression
 
@@ -246,7 +246,7 @@ ggplot(df_g, aes(x = td, y = RT)) +
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
-![](plot_R_2021_files/figure-gfm/cor-1.png)<!-- -->
+![](README_files/figure-gfm/cor-1.png)<!-- -->
 
 #### By-subj or by-item effect
 
@@ -271,7 +271,7 @@ df_g %>%
   facet_wrap(~ X)
 ```
 
-![](plot_R_2021_files/figure-gfm/purrr-1.png)<!-- -->
+![](README_files/figure-gfm/purrr-1.png)<!-- -->
 
 ### Visual world paradigm data
 
@@ -341,7 +341,7 @@ ggplot(da_plot %>% dplyr::filter(cond == "A2-B2"),
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
-![](plot_R_2021_files/figure-gfm/onecond-1.png)<!-- -->
+![](README_files/figure-gfm/onecond-1.png)<!-- -->
 
 #### All conditions
 
@@ -365,7 +365,7 @@ ggplot(da_plot,
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
-![](plot_R_2021_files/figure-gfm/allcond-1.png)<!-- -->
+![](README_files/figure-gfm/allcond-1.png)<!-- -->
 
 ### Other plots
 
@@ -423,7 +423,7 @@ plist <- purrr::map2(plist, names(plist), ~(.x + ggtitle(.y)))
 do.call("grid.arrange", c(plist, ncol = 2))
 ```
 
-![](plot_R_2021_files/figure-gfm/gamplot-1.png)<!-- -->
+![](README_files/figure-gfm/gamplot-1.png)<!-- -->
 
 #### Dual y-axis
 
@@ -477,7 +477,7 @@ ggplot() +
   )
 ```
 
-![](plot_R_2021_files/figure-gfm/dual-1.png)<!-- -->
+![](README_files/figure-gfm/dual-1.png)<!-- -->
 
 #### Non-alphabet characters
 
@@ -491,4 +491,4 @@ ggplot(data=data.frame(x = 0, y = 0)) +
   theme(axis.title.y = element_text(family="STFangsong"))
 ```
 
-![](plot_R_2021_files/figure-gfm/rarechar-1.png)<!-- -->
+![](README_files/figure-gfm/rarechar-1.png)<!-- -->
